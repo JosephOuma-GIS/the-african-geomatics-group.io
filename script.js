@@ -23,6 +23,24 @@ window.addEventListener('scroll', function() {
         navbar.style.boxShadow = 'none';
     }
 });
+// Add scroll animations for courses
+function animateCoursesOnScroll() {
+    const courseBoxes = document.querySelectorAll('.course-box');
+    const serviceCards = document.querySelectorAll('.service-card');
+    
+    const elements = [...courseBoxes, ...serviceCards];
+    
+    elements.forEach(element => {
+        const elementTop = element.getBoundingClientRect().top;
+        const windowHeight = window.innerHeight;
+        
+        if (elementTop < windowHeight - 100) {
+            element.style.opacity = '1';
+            element.style.transform = 'translateY(0)';
+        }
+    });
+}
+
 
 // Form submission handling
 document.getElementById('contactForm').addEventListener('submit', function(e) {
