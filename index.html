@@ -4,6 +4,223 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Joseph Ouma | Geospatial Data Scientist</title>
+    /* Enhanced Services & Courses Styles */
+.services-category, .courses-category {
+    margin-bottom: 4rem;
+}
+
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-bottom: 2rem;
+}
+
+.service-card {
+    background: white;
+    padding: 2.5rem 2rem;
+    border-radius: 15px;
+    text-align: center;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border-left: 4px solid #2c5530;
+}
+
+.service-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+}
+
+.service-icon {
+    width: 80px;
+    height: 80px;
+    background: linear-gradient(135deg, #2c5530, #4a7c59);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 1.5rem;
+    color: white;
+    font-size: 2rem;
+}
+
+.service-card h3 {
+    color: #2c5530;
+    margin-bottom: 1rem;
+    font-size: 1.3rem;
+}
+
+.service-features {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    justify-content: center;
+    margin-top: 1.5rem;
+}
+
+.service-features span {
+    background: #e8f5e8;
+    color: #2c5530;
+    padding: 0.4rem 0.8rem;
+    border-radius: 15px;
+    font-size: 0.8rem;
+    font-weight: 500;
+}
+
+/* Courses Grid */
+.courses-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 2rem;
+}
+
+.course-box {
+    background: white;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.course-box:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+}
+
+.course-header {
+    padding: 2rem;
+    color: white;
+    position: relative;
+    min-height: 180px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.course-badge {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    background: rgba(255, 255, 255, 0.2);
+    padding: 0.3rem 1rem;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: 600;
+    backdrop-filter: blur(10px);
+}
+
+.course-header h3 {
+    margin: 0.5rem 0;
+    font-size: 1.3rem;
+    line-height: 1.3;
+}
+
+.course-header p {
+    margin: 0;
+    opacity: 0.9;
+    font-size: 0.95rem;
+}
+
+/* Course Theme Backgrounds */
+.qgis-course {
+    background: linear-gradient(135deg, #179c52 0%, #1e6b3a 100%);
+}
+
+.gee-course {
+    background: linear-gradient(135deg, #4285f4 0%, #34a853 100%);
+}
+
+.arcpro-course {
+    background: linear-gradient(135deg, #e41c38 0%, #8b1e3f 100%);
+}
+
+.programming-course {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+}
+
+.course-content {
+    padding: 2rem;
+}
+
+.course-description {
+    margin-bottom: 1.5rem;
+}
+
+.course-description p {
+    color: #4a5568;
+    line-height: 1.6;
+    margin: 0;
+}
+
+.course-details {
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+    margin-bottom: 1.5rem;
+    padding: 1.5rem 0;
+    border-top: 1px solid #e2e8f0;
+    border-bottom: 1px solid #e2e8f0;
+}
+
+.detail-item {
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+    color: #4a5568;
+    font-size: 0.9rem;
+}
+
+.detail-item i {
+    color: #2c5530;
+    width: 16px;
+}
+
+.learning-outcomes h4 {
+    color: #2c5530;
+    margin-bottom: 0.8rem;
+    font-size: 1rem;
+}
+
+.learning-outcomes ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.learning-outcomes li {
+    padding: 0.3rem 0;
+    color: #4a5568;
+    position: relative;
+    padding-left: 1.5rem;
+    font-size: 0.9rem;
+    line-height: 1.4;
+}
+
+.learning-outcomes li::before {
+    content: "▸";
+    position: absolute;
+    left: 0;
+    color: #2c5530;
+    font-weight: bold;
+}
+
+.course-btn {
+    width: 100%;
+    padding: 12px;
+    background: #2c5530;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.3s ease;
+    margin-top: 1rem;
+}
+
+.course-btn:hover {
+    background: #4a7c59;
+}
     <link rel="stylesheet" href="styles.css">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
 </head>
