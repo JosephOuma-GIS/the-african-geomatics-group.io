@@ -1156,24 +1156,3 @@
             this.reset();
         });
 
-        // Course enrollment function
-        function enrollCourse(courseName) {
-            alert(`Thank you for your interest in "${courseName}"! You will be redirected to the enrollment page.`);
-            // In a real implementation, you would redirect to a payment or enrollment page
-            // window.location.href = `/enroll?course=${encodeURIComponent(courseName)}`;
-        }
-
-        // Navbar background on scroll
-        window.addEventListener('scroll', function() {
-            const navbar = document.querySelector('.navbar');
-            if (window.scrollY > 100) {
-                navbar.style.background = 'rgba(255, 255, 255, 0.98)';
-                navbar.style.boxShadow = '0 2px 10px rgba(0, 0, 0, 0.1)';
-            } else {
-                navbar.style.background = 'rgba(255, 255, 255, 0.95)';
-                navbar.style.boxShadow = 'none';
-            }
-        });
-    </script>
-</body>
-</html>
