@@ -183,6 +183,80 @@
             margin-bottom: 1.5rem;
         }
 
+        /* Projects */
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 2.5rem;
+        }
+        .project-card {
+            background: white;
+            border-radius: 16px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+            transition: transform 0.3s;
+        }
+        .project-card:hover { transform: translateY(-10px); }
+        .project-img {
+            height: 220px;
+            background: var(--bg-alt);
+            position: relative;
+            overflow: hidden;
+        }
+        .project-img::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(45deg, rgba(30,64,175,0.7), rgba(21,128,61,0.7));
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 4rem;
+            opacity: 0.9;
+        }
+        .project-content {
+            padding: 2rem;
+        }
+        .client-logo {
+            height: 60px;
+            margin-bottom: 1rem;
+            background: #f1f5f9;
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            color: var(--primary);
+        }
+
+        /* Staff */
+        .staff-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2.5rem;
+        }
+        .staff-card {
+            text-align: center;
+            background: white;
+            padding: 2.5rem;
+            border-radius: 16px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+        }
+        .staff-img {
+            width: 180px;
+            height: 180px;
+            border-radius: 50%;
+            background: var(--secondary);
+            margin: 0 auto 1.5rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 3.5rem;
+            font-weight: bold;
+        }
+
         /* Careers / Jobs Section */
         .jobs {
             background: var(--bg-alt);
@@ -251,6 +325,8 @@
                 <li><a href="#home">Home</a></li>
                 <li><a href="#about">About</a></li>
                 <li><a href="#services">Services</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#staff">Team</a></li>
                 <li><a href="#careers">Careers</a></li>
                 <li><a href="#contact">Contact</a></li>
             </ul>
@@ -267,9 +343,6 @@
                     <a href="#services" class="btn btn-primary">Explore Our Services</a>
                     <a href="#contact" class="btn btn-outline">Schedule Consultation</a>
                 </div>
-                <p style="margin-top: 2rem; font-size: 1.1rem; color: var(--secondary); font-weight: 600;">
-                    Joseph Otieno Ouma • Director & Lead Consultant
-                </p>
             </div>
             <div style="flex: 1; text-align: center;">
                 <div style="width: 420px; height: 420px; background: linear-gradient(135deg, var(--secondary), var(--primary)); border-radius: 20px; margin: 0 auto; position: relative; overflow: hidden; box-shadow: 0 20px 40px rgba(0,0,0,0.15);">
@@ -288,7 +361,6 @@
                     <h3>Precision. Insight. Impact.</h3>
                     <p>The African Geomatics Group is a premier geospatial consulting firm headquartered in Nairobi, Kenya, specializing in advanced spatial analysis, remote sensing, and GIS solutions tailored for African development challenges.</p>
                     <p>Led by <strong>Joseph Otieno Ouma</strong>, a renowned geospatial expert with over a decade of experience across East Africa, China, and West Africa, we bridge cutting-edge technology with local knowledge to deliver actionable insights.</p>
-                    <p class="director-title">Joseph Otieno Ouma<br><span style="color: var(--gray); font-weight: normal;">MSc Remote Sensing & GIS • Google Earth Engine Specialist</span></p>
                 </div>
                 <div style="background: var(--bg-alt); padding: 3rem; border-radius: 16px;">
                     <h3 style="color: var(--primary); margin-bottom: 2rem;">Our Expertise</h3>
@@ -344,7 +416,67 @@
         </div>
     </section>
 
-    <!-- Careers / Jobs -->
+    <!-- Real Projects -->
+    <section id="projects">
+        <div class="container">
+            <h2 class="section-title">Selected Projects & Clients</h2>
+            <p class="section-subtitle">We deliver measurable impact for leading organizations across Africa and beyond</p>
+            <div class="projects-grid">
+                <div class="project-card">
+                    <div class="project-img"><div class="client-logo">KISUMU WATER & SANITATION</div></div>
+                    <div class="project-content">
+                        <h3>Water Distribution Network Mapping</h3>
+                        <p>Complete GIS-based asset mapping and hydraulic modeling for Kisumu City water supply network upgrade.</p>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <div class="project-img"><div class="client-logo">WUHAN UNIVERSITY</div></div>
+                    <div class="project-content">
+                        <h3>Joint Research: Vegetation Stress Monitoring</h3>
+                        <p>Multi-year collaboration on S2REP fusion framework for early drought detection using Sentinel-2 and Landsat data.</p>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <div class="project-img" style="background: linear-gradient(45deg, #15803d, #166534); color:white;"><i class="fas fa-city" style="font-size:4rem;"></i></div>
+                    <div class="project-content">
+                        <h3>Narok County Land Use Planning</h3>
+                        <p>Comprehensive spatial planning and zoning using machine learning classification of high-resolution imagery.</p>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <div class="project-img" style="background: linear-gradient(45deg, #dc2626, #991b1b); color:white;"><i class="fas fa-leaf" style="font-size:4rem;"></i></div>
+                    <div class="project-content">
+                        <h3>Deforestation Monitoring – Mau Forest</h3>
+                        <p>Real-time forest cover change detection system using Google Earth Engine for conservation authorities.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Staff / Team Section -->
+    <section id="staff" style="background: var(--bg-alt);">
+        <div class="container">
+            <h2 class="section-title">Our Leadership</h2>
+            <div class="staff-grid">
+                <div class="staff-card">
+                    <div class="staff-img">JO</div>
+                    <h3>Joseph Otieno Ouma</h3>
+                    <p class="director-title">Director & Lead Consultant</p>
+                    <p>MSc Remote Sensing & GIS<br>Google Earth Engine Specialist<br>10+ years in geospatial intelligence across Africa & Asia</p>
+                    <div style="margin-top: 1rem;">
+                        <a href="https://linkedin.com/in/joseph-otieno-ouma" style="color: var(--primary); margin: 0 0.5rem;"><i class="fab fa-linkedin fa-lg"></i></a>
+                        <a href="mailto:joseph@african-geomatics.com" style="color: var(--primary); margin: 0 0.5rem;"><i class="fas fa-envelope fa-lg"></i></a>
+                    </div>
+                </div>
+            </div>
+            <p style="text-align: center; margin-top: 3rem; font-size: 1.1rem; color: var(--gray);">
+                We are growing. <a href="#careers" style="color: var(--secondary); font-weight: 600;">Join our expert team →</a>
+            </p>
+        </div>
+    </section>
+
+    <!-- Careers / Jobs Section -->
     <section id="careers" class="jobs">
         <div class="container">
             <h2 class="section-title">Join Our Team</h2>
@@ -413,7 +545,6 @@
     </footer>
 
     <script>
-        // Smooth scrolling
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function(e) {
                 e.preventDefault();
@@ -425,4 +556,3 @@
     </script>
 </body>
 </html>
-
