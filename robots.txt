@@ -1,1 +1,9 @@
+# robots.txt — African Geomatics Group
+# https://african-geomatics-group.netlify.app/
+
+User-agent: *
+Allow: /
+
+# Sitemap location
+Sitemap: https://african-geomatics-group.netlify.app/sitemap.xml
 
