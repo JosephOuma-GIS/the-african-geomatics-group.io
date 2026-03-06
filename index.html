@@ -1,921 +1,152 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>The African Geomatics Group | Geospatial Intelligence & Consulting</title>
-    <meta name="google-site-verification" content="ALKkVZTn0Hlj1OsrdZ3X-6zQUw_tAf9knwD2ObteD58" />
-    <link rel="icon" type="image/jpeg" href="agg-logo.jpg">
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
 
-        :root {
-            --primary-blue: #0056b3;
-            --light-blue: #007bff;
-            --cyan: #17a2b8;
-            --dark: #1a1a1a;
-            --light: #f8f9fa;
-            --white: #ffffff;
-            --accent: #ffc107;
-        }
+<!-- BASIC PAGE META -->
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-        body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            line-height: 1.6;
-            color: #333;
-        }
+<title>African Geomatics Group | GIS & Geospatial Consulting in Africa</title>
 
-        /* Header & Navigation */
-        header {
-            background: linear-gradient(135deg, var(--primary-blue) 0%, var(--light-blue) 100%);
-            color: white;
-            padding: 1rem 0;
-            position: sticky;
-            top: 0;
-            z-index: 1000;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-        }
+<meta name="description" content="African Geomatics Group delivers GIS consulting, remote sensing, land administration and spatial intelligence solutions across Africa.">
 
-        .header-top {
-            background: var(--dark);
-            padding: 0.5rem 0;
-            font-size: 0.9rem;
-        }
+<meta name="keywords" content="GIS consulting Africa, geomatics Kenya, remote sensing Africa, spatial intelligence, environmental monitoring GIS">
 
-        .header-top-content {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 2rem;
-            display: flex;
-            justify-content: space-between;
-            flex-wrap: wrap;
-            gap: 1rem;
-        }
+<meta name="author" content="African Geomatics Group">
 
-        .logo-nav {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 1.5rem 2rem;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
+<meta name="robots" content="index, follow">
 
-        .logo {
-            font-size: 1.5rem;
-            font-weight: bold;
-            display: flex;
-            align-items: center;
-            gap: 0.5rem;
-        }
+<link rel="canonical" href="https://african-geomatics-group.netlify.app/">
 
-        .logo img {
-            max-height: 80px;
-            width: auto;
-            transition: transform 0.3s, opacity 0.3s;
-        }
 
-        .logo img:hover {
-            transform: scale(1.05);
-            opacity: 0.9;
-        }
+<!-- GOOGLE SEARCH CONSOLE VERIFICATION -->
+<meta name="google-site-verification" content="ALKkVZTn0Hlj1OsrdZ3X-6zQUw_tAf9knwD2ObteD58" />
 
-        nav ul {
-            list-style: none;
-            display: flex;
-            gap: 2rem;
-            flex-wrap: wrap;
-        }
 
-        nav a {
-            color: white;
-            text-decoration: none;
-            transition: color 0.3s;
-        }
+<!-- FAVICON -->
+<link rel="icon" type="image/jpeg" href="agg-logo.jpg">
 
-        nav a:hover {
-            color: var(--accent);
-        }
 
-        /* Hero Section */
-        .hero {
-            background: linear-gradient(135deg, var(--primary-blue) 0%, var(--light-blue) 100%);
-            color: white;
-            padding: 6rem 2rem;
-            text-align: center;
-        }
+<!-- AI / GEOSEO TAGS -->
+<meta name="coverage" content="Africa">
+<meta name="distribution" content="global">
+<meta name="target" content="GIS professionals, governments, NGOs, researchers, urban planners">
 
-        .hero h1 {
-            font-size: 3rem;
-            margin-bottom: 1rem;
-            text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
-        }
+<meta name="geo.region" content="KE">
+<meta name="geo.country" content="Kenya">
+<meta name="geo.city" content="Kisumu">
+<meta name="geo.placename" content="Kisumu, Kenya">
 
-        .hero p {
-            font-size: 1.3rem;
-            margin-bottom: 2rem;
-            max-width: 600px;
-            margin-left: auto;
-            margin-right: auto;
-        }
+<meta name="geo.position" content="-0.1022;34.7617">
+<meta name="ICBM" content="-0.1022, 34.7617">
 
-        .btn {
-            display: inline-block;
-            padding: 0.75rem 1.5rem;
-            border-radius: 5px;
-            text-decoration: none;
-            transition: all 0.3s;
-            cursor: pointer;
-            border: none;
-            font-size: 1rem;
-        }
+<meta name="DC.title" content="African Geomatics Group">
+<meta name="DC.creator" content="Joseph Otieno Ouma">
+<meta name="DC.subject" content="GIS, Remote Sensing, Geospatial Intelligence, Environmental Monitoring">
+<meta name="DC.coverage" content="Africa">
 
-        .btn-primary {
-            background: var(--accent);
-            color: var(--dark);
-            font-weight: bold;
-        }
 
-        .btn-primary:hover {
-            background: #ffb300;
-            transform: translateY(-2px);
-        }
+<!-- OPEN GRAPH (SOCIAL PREVIEW) -->
+<meta property="og:type" content="website">
+<meta property="og:title" content="African Geomatics Group | Geospatial Intelligence for Africa">
+<meta property="og:description" content="Professional GIS consulting, remote sensing, spatial analysis and environmental monitoring across Africa">
+<meta property="og:url" content="https://african-geomatics-group.netlify.app/">
+<meta property="og:image" content="https://african-geomatics-group.netlify.app/agg-logo.jpg">
+<meta property="og:site_name" content="African Geomatics Group">
 
-        .btn-secondary {
-            background: transparent;
-            color: white;
-            border: 2px solid white;
-        }
 
-        .btn-secondary:hover {
-            background: white;
-            color: var(--primary-blue);
-        }
+<!-- TWITTER CARD -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="African Geomatics Group">
+<meta name="twitter:description" content="GIS consulting and geospatial intelligence across Africa">
+<meta name="twitter:image" content="https://african-geomatics-group.netlify.app/agg-logo.jpg">
 
-        /* Core Values Section */
-        .core-values {
-            background: var(--light);
-            padding: 4rem 2rem;
-        }
 
-        .core-values h2 {
-            text-align: center;
-            font-size: 2.5rem;
-            margin-bottom: 3rem;
-            color: var(--primary-blue);
-        }
-
-        .values-grid {
-            max-width: 1200px;
-            margin: 0 auto;
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 2rem;
-        }
-
-        .value-card {
-            background: white;
-            border-left: 5px solid var(--light-blue);
-            padding: 2rem;
-            border-radius: 8px;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-            transition: transform 0.3s, box-shadow 0.3s;
-        }
-
-        .value-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 8px 12px rgba(0,0,0,0.15);
-        }
-
-        .value-card h3 {
-            color: var(--light-blue);
-            margin-bottom: 1rem;
-            font-size: 1.5rem;
-        }
-
-        /* About Section */
-        .about {
-            padding: 4rem 2rem;
-            max-width: 1200px;
-            margin: 0 auto;
-        }
-
-        .about h2 {
-            font-size: 2.5rem;
-            color: var(--primary-blue);
-            margin-bottom: 2rem;
-            text-align: center;
-        }
-
-        .about-content {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 3rem;
-            align-items: center;
-        }
-
-        .about-text h3 {
-            color: var(--light-blue);
-            margin-bottom: 1rem;
-            font-size: 1.5rem;
-        }
-
-        .about-text p {
-            margin-bottom: 1rem;
-            line-height: 1.8;
-        }
-
-        .leadership-profile {
-            background: var(--light);
-            padding: 2rem;
-            border-radius: 8px;
-            text-align: center;
-        }
-
-        .leadership-profile img {
-            width: 150px;
-            height: 150px;
-            border-radius: 50%;
-            margin-bottom: 1rem;
-            border: 4px solid var(--light-blue);
-            object-fit: cover;
-        }
-
-        /* Services Section */
-        .services {
-            background: var(--light);
-            padding: 4rem 2rem;
-        }
-
-        .services h2 {
-            font-size: 2.5rem;
-            color: var(--primary-blue);
-            margin-bottom: 3rem;
-            text-align: center;
-        }
-
-        .services-grid {
-            max-width: 1200px;
-            margin: 0 auto;
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 2rem;
-        }
-
-        .service-card {
-            background: white;
-            padding: 2rem;
-            border-radius: 8px;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-            border-top: 4px solid var(--light-blue);
-            transition: transform 0.3s;
-        }
-
-        .service-card:hover {
-            transform: translateY(-5px);
-        }
-
-        .service-card h3 {
-            color: var(--light-blue);
-            margin-bottom: 1rem;
-        }
-
-        /* Projects Section */
-        .projects {
-            padding: 4rem 2rem;
-            max-width: 1200px;
-            margin: 0 auto;
-        }
-
-        .projects h2 {
-            font-size: 2.5rem;
-            color: var(--primary-blue);
-            margin-bottom: 3rem;
-            text-align: center;
-        }
-
-        .projects-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 2rem;
-        }
-
-        .project-card {
-            background: white;
-            border: 2px solid var(--light-blue);
-            border-radius: 8px;
-            overflow: hidden;
-            transition: all 0.3s;
-        }
-
-        .project-card:hover {
-            box-shadow: 0 8px 15px rgba(0,0,0,0.1);
-            border-color: var(--cyan);
-        }
-
-        .project-image {
-            width: 100%;
-            height: 200px;
-            background-size: cover;
-            background-position: center;
-        }
-
-        .project-content {
-            padding: 2rem;
-        }
-
-        .project-card h3 {
-            color: var(--light-blue);
-            margin-bottom: 0.5rem;
-        }
-
-        .project-tag {
-            display: inline-block;
-            background: var(--light-blue);
-            color: white;
-            padding: 0.3rem 0.8rem;
-            border-radius: 20px;
-            font-size: 0.85rem;
-            margin-bottom: 1rem;
-        }
-
-        /* Team Section */
-        .team {
-            background: var(--light);
-            padding: 4rem 2rem;
-        }
-
-        .team h2 {
-            font-size: 2.5rem;
-            color: var(--primary-blue);
-            margin-bottom: 3rem;
-            text-align: center;
-        }
-
-        .team-grid {
-            max-width: 1200px;
-            margin: 0 auto;
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 2rem;
-        }
-
-        .team-member {
-            background: white;
-            padding: 2rem;
-            border-radius: 8px;
-            text-align: center;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-        }
-
-        .team-member img {
-            width: 120px;
-            height: 120px;
-            border-radius: 50%;
-            margin-bottom: 1rem;
-            border: 3px solid var(--light-blue);
-            object-fit: cover;
-        }
-
-        .team-member h3 {
-            color: var(--light-blue);
-            margin-bottom: 0.5rem;
-        }
-
-        /* Careers Section */
-        .careers {
-            padding: 4rem 2rem;
-            max-width: 1200px;
-            margin: 0 auto;
-        }
-
-        .careers h2 {
-            font-size: 2.5rem;
-            color: var(--primary-blue);
-            margin-bottom: 3rem;
-            text-align: center;
-        }
-
-        .job-posting {
-            background: var(--light);
-            border-left: 4px solid var(--light-blue);
-            padding: 2rem;
-            margin-bottom: 1.5rem;
-            border-radius: 4px;
-        }
-
-        .job-posting h3 {
-            color: var(--light-blue);
-            margin-bottom: 0.5rem;
-        }
-
-        .job-meta {
-            font-size: 0.9rem;
-            color: #666;
-            margin-bottom: 1rem;
-        }
-
-        /* Contact Section */
-        .contact {
-            background: linear-gradient(135deg, var(--primary-blue) 0%, var(--light-blue) 100%);
-            color: white;
-            padding: 4rem 2rem;
-        }
-
-        .contact h2 {
-            font-size: 2.5rem;
-            margin-bottom: 3rem;
-            text-align: center;
-        }
-
-        .contact-content {
-            max-width: 800px;
-            margin: 0 auto;
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 2rem;
-        }
-
-        .contact-info {
-            display: flex;
-            flex-direction: column;
-            gap: 1.5rem;
-        }
-
-        .contact-item {
-            display: flex;
-            align-items: flex-start;
-            gap: 1rem;
-        }
-
-        .contact-item h3 {
-            margin-bottom: 0.5rem;
-        }
-
-        .form-group {
-            margin-bottom: 1rem;
-        }
-
-        .form-group input,
-        .form-group textarea {
-            width: 100%;
-            padding: 0.75rem;
-            border: none;
-            border-radius: 4px;
-            font-family: inherit;
-        }
-
-        .form-group textarea {
-            resize: vertical;
-            min-height: 100px;
-        }
-
-        /* Footer */
-        footer {
-            background: var(--dark);
-            color: white;
-            text-align: center;
-            padding: 2rem;
-        }
-
-        footer p {
-            margin-bottom: 0.5rem;
-        }
-
-        /* Responsive */
-        @media (max-width: 768px) {
-            .logo-nav {
-                flex-direction: column;
-                gap: 1rem;
-            }
-
-            nav ul {
-                gap: 1rem;
-            }
-
-            .hero h1 {
-                font-size: 2rem;
-            }
-
-            .hero p {
-                font-size: 1rem;
-            }
-
-            .about-content {
-                grid-template-columns: 1fr;
-            }
-
-            .contact-content {
-                grid-template-columns: 1fr;
-            }
-        }
-    </style>
-</head>
-<body>
-    <script type="application/ld+json">
+<!-- STRUCTURED DATA (GOOGLE INDEXING) -->
+<script type="application/ld+json">
 {
  "@context": "https://schema.org",
- "@type": "WebSite",
+ "@type": "ProfessionalService",
  "name": "African Geomatics Group",
  "url": "https://african-geomatics-group.netlify.app/",
- "potentialAction": {
-   "@type": "SearchAction",
-   "target": "https://african-geomatics-group.netlify.app/?search={search_term_string}",
-   "query-input": "required name=search_term_string"
+ "logo": "https://african-geomatics-group.netlify.app/agg-logo.jpg",
+ "description": "Geospatial consulting firm specialising in GIS, remote sensing, spatial analysis, and environmental monitoring across Africa.",
+ "areaServed": "Africa",
+ "founder": {
+   "@type": "Person",
+   "name": "Joseph Otieno Ouma"
+ },
+ "address": {
+   "@type": "PostalAddress",
+   "addressLocality": "Kisumu",
+   "addressCountry": "Kenya"
  }
 }
 </script>
-    <!-- Header -->
-    <header>
-        <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
-  <!-- PRIMARY SEO -->
-  <title>African Geomatics Group | GIS & Geospatial Consulting in Kenya & Africa</title>
-
-  <meta name="description" content="African Geomatics Group is a leading geospatial consulting firm in Kenya delivering GIS, remote sensing, spatial analysis, land administration, urban planning and environmental monitoring solutions across Africa." />
-
-  <meta name="keywords" content="GIS consulting Africa, geomatics Kenya, remote sensing Africa, spatial analysis Kenya, land administration GIS, urban planning Africa, geospatial intelligence, Google Earth Engine, environmental monitoring GIS, African Geomatics Group" />
-
-  <meta name="author" content="African Geomatics Group" />
-  <meta name="robots" content="index, follow, max-image-preview:large" />
-
-  <link rel="canonical" href="https://african-geomatics-group.netlify.app/" />
-
-  <!-- FAVICON -->
-  <link rel="icon" type="image/png" href="/agg-logo.jpg">
-
-  <!-- MOBILE THEME -->
-  <meta name="theme-color" content="#0a3d62">
-
-  <!-- OPEN GRAPH -->
-  <meta property="og:type" content="website" />
-  <meta property="og:url" content="https://african-geomatics-group.netlify.app/" />
-  <meta property="og:title" content="African Geomatics Group | Geospatial Intelligence for Africa" />
-  <meta property="og:description" content="Professional GIS consulting, remote sensing, land administration and spatial intelligence solutions across Africa." />
-  <meta property="og:image" content="https://african-geomatics-group.netlify.app/agg-logo.jpg" />
-  <meta property="og:site_name" content="African Geomatics Group" />
-  <meta property="og:locale" content="en_KE" />
-
-  <!-- TWITTER CARD -->
-  <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="African Geomatics Group | GIS & Geospatial Consulting in Africa" />
-  <meta name="twitter:description" content="GIS consulting, remote sensing, spatial analysis and environmental monitoring solutions across Africa." />
-  <meta name="twitter:image" content="https://african-geomatics-group.netlify.app/agg-logo.jpg" />
-
-  <!-- GEO TARGETING -->
-  <meta name="geo.region" content="KE" />
-  <meta name="geo.placename" content="Kisumu, Kenya" />
-  <meta name="geo.position" content="-0.1022;34.7617" />
-  <meta name="ICBM" content="-0.1022, 34.7617" />
-
-  <!-- STRUCTURED DATA -->
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "ProfessionalService",
-    "name": "African Geomatics Group",
-    "url": "https://african-geomatics-group.netlify.app/",
-    "logo": "https://african-geomatics-group.netlify.app/agg-logo.jpg",
-    "image": "https://african-geomatics-group.netlify.app/agg-logo.jpg",
-    "description": "Geospatial consulting firm specialising in GIS, remote sensing, land administration, urban planning and environmental monitoring solutions across Africa.",
-    "telephone": "+254741305673",
-    "email": "ouma.otih@gmail.com",
-    "address": {
-      "@type": "PostalAddress",
-      "addressLocality": "Kisumu",
-      "addressRegion": "Nyanza",
-      "addressCountry": "Kenya"
-    },
-    "areaServed": {
-      "@type": "Place",
-      "name": "Africa"
-    },
-    "founder": {
-      "@type": "Person",
-      "name": "Joseph Otieno Ouma",
-      "jobTitle": "Director & Lead Consultant"
-    },
-    "hasOfferCatalog": {
-      "@type": "OfferCatalog",
-      "name": "Geospatial Services",
-      "itemListElement": [
-        {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Remote Sensing & Earth Observation"}},
-        {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Land Administration & Cadastre"}},
-        {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Urban Planning & Smart Cities"}},
-        {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Environmental & Climate Solutions"}},
-        {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Custom GIS Development"}},
-        {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "GIS Training & Capacity Building"}}
-      ]
-    }
-  }
-  </script>
-
-  <!-- EXISTING CSS -->
-  <!-- <link rel="stylesheet" href="styles.css" /> -->
 
 </head>
-    </header>
 
-    <!-- Hero Section -->
-    <section id="home" class="hero">
-        <h1>Geospatial Intelligence for Africa's Future</h1>
-        <p>Leading geomatics consulting firm delivering high-impact spatial solutions across land management, environmental monitoring, urban planning, and climate resilience in Africa.</p>
-        <a href="#services" class="btn btn-primary">Explore Our Services</a>
-        <a href="#contact" class="btn btn-secondary" style="margin-left: 1rem;">Schedule Consultation</a>
-    </section>
 
-    <!-- Core Values Section -->
-    <section id="values" class="core-values">
-        <h2>Our Core Values</h2>
-        <div class="values-grid">
-            <div class="value-card">
-                <h3> Teamwork</h3>
-                <p>Driven by team spirit and a sense of belonging through the pursuit of collaborations and synergy. We believe that diverse expertise working together delivers superior geospatial solutions.</p>
-            </div>
+<body>
 
-            <div class="value-card">
-                <h3> Customer Focus</h3>
-                <p>Committed to the effective and efficient delivery of quality and appropriate services and products to all our stakeholders. Your success is our measure of impact.</p>
-            </div>
+<!-- HEADER -->
+<header>
 
-            <div class="value-card">
-                <h3> Innovation & Creativity</h3>
-                <p>Continuously recovering our operations and adding value to our stakeholders by embracing and pursuing innovative and creative solutions in geomatics and spatial analysis.</p>
-            </div>
+<nav>
+<ul>
+<li><a href="#home">Home</a></li>
+<li><a href="#services">Services</a></li>
+<li><a href="#projects">Projects</a></li>
+<li><a href="#about">About</a></li>
+<li><a href="#contact">Contact</a></li>
+</ul>
+</nav>
 
-            <div class="value-card">
-                <h3> Stakeholder Engagement</h3>
-                <p>Proactively and continuously engaging our stakeholders and users for relevance and value proposition. We listen, learn, and adapt to serve better.</p>
-            </div>
+</header>
 
-            <div class="value-card">
-                <h3>Accountability</h3>
-                <p>Transparent in our operations with measurable outcomes and impact tracking. We stand behind our work and deliver what we promise.</p>
-            </div>
 
-            <div class="value-card">
-                <h3>Equity & Inclusiveness</h3>
-                <p>Committed to accessibility and inclusive representation in our team, projects, and solutions. Spatial intelligence should benefit all communities.</p>
-            </div>
-        </div>
-    </section>
+<!-- HERO SECTION -->
+<section id="home">
 
-    <!-- About Section -->
-    <section id="about" class="about">
-        <h2>About The African Geomatics Group</h2>
-        <div class="about-content">
-            <div class="about-text">
-                <h3>Precision. Insight. Impact.</h3>
-                <p>The African Geomatics Group is a premier geospatial consulting firm headquartered in Kenya, specializing in advanced spatial analysis, remote sensing, and GIS solutions tailored for African development challenges.</p>
-                
-                <p>We bridge cutting-edge technology with local knowledge to deliver actionable insights that drive real-world impact. From land administration to climate resilience, we help organizations make better decisions through geospatial intelligence.</p>
+<h1>Geospatial Intelligence for Africa's Future</h1>
 
-                <h3 style="margin-top: 2rem;">Our Expertise</h3>
-                <ul style="margin-left: 1.5rem;">
-                    <li>Land Use & Urban Planning</li>
-                    <li>Environmental & Climate Monitoring</li>
-                    <li>Agricultural Intelligence</li>
-                    <li>Infrastructure & Disaster Management</li>
-                    <li>Custom Web GIS Applications</li>
-                </ul>
-            </div>
+<p>
+Leading geomatics consulting firm delivering spatial solutions in land management,
+urban planning, environmental monitoring, and climate resilience.
+</p>
 
-            <div class="leadership-profile">
-                <h3>Meet Our Leader</h3>
-                <div style="background: white; padding: 1.5rem; border-radius: 8px;">
-                    <img src="images/joseph-ouma.jpg.jpg" alt="Joseph Otieno Ouma">
-                    <h4 style="color: var(--light-blue); margin-bottom: 0.5rem;">Joseph Otieno Ouma</h4>
-                    <p style="color: #666; font-size: 0.9rem; margin-bottom: 1rem;">Director & Lead Consultant</p>
-                    <p style="color: #333; font-size: 0.95rem; line-height: 1.6;">MSc Cartography & GIS | GIS Solution Developer | 7+ years in geospatial intelligence across Africa & Asia</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Services Section -->
-    <section id="services" class="services">
-        <h2>Our Services</h2>
-        <p style="text-align: center; max-width: 1200px; margin: 0 auto 3rem; color: #666;">End-to-end geospatial solutions from data acquisition to decision-ready insights</p>
-        <div class="services-grid">
-            <div class="service-card">
-                <h3> Remote Sensing & Earth Observation</h3>
-                <p>High-resolution satellite analysis, cadastral survey, change detection, and time-series monitoring using Sentinel, Landsat, and commercial imagery.</p>
-            </div>
-
-            <div class="service-card">
-                <h3>Land Administration & Cadastre</h3>
-                <p>Digital land registration, boundary delineation, and tenure security solutions for governments and communities.</p>
-            </div>
-
-            <div class="service-card">
-                <h3>Urban Planning & Smart Cities</h3>
-                <p>Spatial modeling, infrastructure planning, and sustainable urban development strategies for resilient cities.</p>
-            </div>
-
-            <div class="service-card">
-                <h3>Environmental & Climate Solutions</h3>
-                <p>Deforestation tracking, carbon mapping, flood risk modeling, and climate adaptation planning for environmental stewardship.</p>
-            </div>
-
-            <div class="service-card">
-                <h3>Custom GIS Development</h3>
-                <p>Tailored web GIS platforms, automation scripts, and enterprise spatial systems built to your exact requirements.</p>
-            </div>
-
-            <div class="service-card">
-                <h3>Training & Capacity Building</h3>
-                <p>Corporate and institutional training in QGIS, Google Earth Engine, ArcGIS Pro, and GIS programming.</p>
-            </div>
-        </div>
-    </section>
-
-    <!-- Projects Section -->
-<section id="projects" class="projects">
-    <h2>Selected Projects & Impact</h2>
-    <p style="text-align: center; color: #666; margin-bottom: 3rem;">We deliver measurable impact for leading organizations across Africa and beyond</p>
-    <div class="projects-grid">
-        <div class="project-card">
-            <div class="project-image" style="background-image: url('images/water-distribution.jpg.jpeg');"></div>
-            <div class="project-content">
-                <div class="project-tag">Infrastructure</div>
-                <h3>Kisumu Water & Sanitation</h3>
-                <p><strong>Water Distribution Network Mapping</strong></p>
-                <p>Complete GIS-based asset mapping and hydraulic modeling for Kisumu City water supply network upgrade, serving over 500,000 residents.</p>
-            </div>
-        </div>
-
-        <div class="project-card">
-            <div class="project-image" style="background-image: url('images/Vegetation%20Stress%20Monitoring.png');"></div>
-            <div class="project-content">
-                <div class="project-tag">Research</div>
-                <h3>Wuhan University</h3>
-                <p><strong>Vegetation Stress Monitoring</strong></p>
-                <p>Joint research on Yala Wetland with vegetation species mapping and multi-year collaboration on S2REP fusion framework for early drought detection.</p>
-            </div>
-        </div>
-
-        <div class="project-card">
-            <div class="project-image" style="background-image: url('images/Advance%20ArcGIS_Sekenani.jpg');"></div>
-            <div class="project-content">
-                <div class="project-tag">Urban Planning</div>
-                <h3>Homa Bay County</h3>
-                <p><strong>Land Use Planning & Analysis</strong></p>
-                <p>Comprehensive spatial planning, zoning analysis, carbon footprint extraction, and urban heat mapping using advanced satellite data and machine learning.</p>
-            </div>
-        </div>
-
-        <div class="project-card">
-            <div class="project-image" style="background-image: url('images/deforestation-monitoring.jpg.jpg');"></div>
-            <div class="project-content">
-                <div class="project-tag">Conservation</div>
-                <h3>Deforestation Monitoring – Homa Hills</h3>
-                <p><strong>Real-time Forest Cover Change Detection</strong></p>
-                <p>Advanced forest cover change detection system using Google Earth Engine for conservation authorities to monitor and respond to deforestation in real-time.</p>
-            </div>
-        </div>
-    </div>
 </section>
-    <!-- Team Section -->
-<section id="team" class="team">
-    <h2>Our Growing Team</h2>
-    <p style="text-align: center; color: #666; margin-bottom: 3rem;">Building Africa's leading geospatial intelligence team</p>
-    <div class="team-grid">
-        <div class="team-member">
-            <img src="images/joseph-ouma.jpg.jpg" alt="Joseph Otieno Ouma">
-            <h3>Joseph Otieno Ouma</h3>
-            <p style="color: var(--light-blue); font-weight: bold;">Director & Lead Consultant</p>
-            <p style="font-size: 0.9rem; color: #666;">MSc Cartography & GIS | 7+ years expertise</p>
-        </div>
 
-        <div class="team-member">
-            <img src="images/team-member-1.jpg.jpg" alt="Remote Sensing Specialist">
-            <h3>Joining Soon</h3>
-            <p style="color: var(--cyan); font-weight: bold;">Remote Sensing Specialist</p>
-            <p style="font-size: 0.9rem; color: #666;">Earth Observation Expert</p>
-        </div>
 
-        <div class="team-member">
-            <img src="images/team-member-2.jpg.jpg" alt="Web GIS Developer">
-            <h3>Joining Soon</h3>
-            <p style="color: var(--light-blue); font-weight: bold;">Web GIS Developer</p>
-            <p style="font-size: 0.9rem; color: #666;">Mapping Platform Expert</p>
-        </div>
-    </div>
+<!-- MAIN CONTENT -->
+<main>
+
+<section id="services">
+<h2>Services</h2>
 </section>
-    <!-- Careers Section -->
-    <section id="careers" class="careers">
-        <h2>Join Our Team</h2>
-        <p style="text-align: center; color: #666; margin-bottom: 3rem;">We are expanding our expert team across Africa. Be part of shaping the future of geospatial intelligence on the continent.</p>
 
-        <div class="job-posting">
-            <h3>🔍 Research Assistant (Remote Sensing Specialist)</h3>
-            <div class="job-meta">Full-Time • Nairobi or Remote • Posted 2 weeks ago</div>
-            <p>Lead advanced remote sensing projects using Google Earth Engine, machine learning classification, and multi-sensor data fusion. Work on real-world conservation and development projects across East Africa.</p>
-            <a href="mailto:ouma.otih@gmail.com?subject=Application:%20Remote%20Sensing%20Specialist" class="btn btn-primary" style="display: inline-block; margin-top: 1rem;">Apply Now</a>
-        </div>
+<section id="projects">
+<h2>Projects</h2>
+</section>
 
-        <div class="job-posting">
-            <h3>Web GIS Developer</h3>
-            <div class="job-meta">Full-Time • Flexible Location • Posted 1 month ago</div>
-            <p>Develop interactive mapping platforms using Leaflet, Mapbox, GeoServer, and modern JavaScript frameworks. Create custom geospatial applications that deliver insights to governments, NGOs, and private sector partners.</p>
-            <a href="mailto:ouma.otih@gmail.com?subject=Application:%20Web%20GIS%20Developer" class="btn btn-primary" style="display: inline-block; margin-top: 1rem;">Apply Now</a>
-        </div>
+<section id="about">
+<h2>About</h2>
+</section>
 
-        <div style="background: var(--light); padding: 2rem; border-radius: 8px; margin-top: 2rem; text-align: center;">
-            <p style="color: #333;">Don't see your ideal role? We're always looking for passionate geospatial professionals.</p>
-            <p style="color: #333; margin-top: 1rem;"><strong>Send your resume and cover letter to:</strong> <a href="mailto:ouma.otih@gmail.com?subject=Career%20Inquiry" style="color: var(--light-blue); text-decoration: none;">ouma.otih@gmail.com</a></p>
-        </div>
-    </section>
+<section id="contact">
+<h2>Contact</h2>
+</section>
 
-    <!-- Contact Section -->
-    <section id="contact" class="contact">
-        <h2>Let's Work Together</h2>
-        <p style="text-align: center; margin-bottom: 3rem;">Partner with us to unlock the power of geospatial intelligence</p>
-        <div class="contact-content">
-            <div class="contact-info">
-                <h3>Get in Touch</h3>
-                <p>We partner with governments, NGOs, private sector, and development agencies across Africa to deliver transformative geospatial solutions.</p>
-                
-                <div class="contact-item">
-                    <span style="font-size: 1.5rem;">📧</span>
-                    <div>
-                        <h4>Email</h4>
-                        <a href="mailto:ouma.otih@gmail.com" style="color: white; text-decoration: none;">ouma.otih@gmail.com</a>
-                    </div>
-                </div>
+</main>
 
-                <div class="contact-item">
-                    <span style="font-size: 1.5rem;">📱</span>
-                    <div>
-                        <h4>Phone</h4>
-                        <a href="tel:+254741305673" style="color: white; text-decoration: none;">+254 741 305 673</a>
-                    </div>
-                </div>
 
-                <div class="contact-item">
-                    <span style="font-size: 1.5rem;">📍</span>
-                    <div>
-                        <h4>Location</h4>
-                        <p>Kisumu & Nairobi, Kenya</p>
-                    </div>
-                </div>
-            </div>
+<!-- FOOTER -->
+<footer>
 
-            <div>
-                <h3>Send us a Message</h3>
-                <form style="display: flex; flex-direction: column; gap: 1rem;">
-                    <div class="form-group">
-                        <input type="text" placeholder="Your Name" required>
-                    </div>
-                    <div class="form-group">
-                        <input type="email" placeholder="Your Email" required>
-                    </div>
-                    <div class="form-group">
-                        <input type="text" placeholder="Subject">
-                    </div>
-                    <div class="form-group">
-                        <textarea placeholder="Your Message" required></textarea>
-                    </div>
-                    <button type="submit" class="btn btn-primary">Send Message</button>
-                </form>
-            </div>
-        </div>
-    </section>
+<p>© 2026 African Geomatics Group</p>
 
-    <!-- Footer -->
-    <footer>
-        <div style="margin-bottom: 1.5rem;">
-            <img src="agg-logo.jpg" alt="African Geomatics Group" style="max-width: 180px; width: 100%; height: auto;">
-        </div>
-        <p>&copy; 2025 The African Geomatics Group. All rights reserved.</p>
-        <p>Transforming Africa's Future Through Spatial Intelligence 🌍</p>
-        <p style="margin-top: 1rem; font-size: 0.9rem;">Committed to Sustainable Development | Data-Driven Solutions | Community-Focused Impact</p>
-    </footer>
+</footer>
 
-    <script>
-        // Smooth scrolling for anchor links
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-                const target = document.querySelector(this.getAttribute('href'));
-                if (target) {
-                    target.scrollIntoView({ behavior: 'smooth' });
-                }
-            });
-        });
-
-        // Form submission handler
-        document.querySelector('form').addEventListener('submit', function(e) {
-            e.preventDefault();
-            alert('Thank you for your message! We will get back to you soon.');
-            this.reset();
-        });
-    </script>
 </body>
 </html>
