@@ -1,0 +1,110 @@
+---
+import Layout from '~/layouts/PageLayout.astro';
+import Hero from '~/components/widgets/Hero.astro';
+import Features from '~/components/widgets/Features.astro';
+import Features2 from '~/components/widgets/Features2.astro';
+import Content from '~/components/widgets/Content.astro';
+import Projects from '~/components/widgets/Projects.astro';
+import BlogLatestPosts from '~/components/widgets/BlogLatestPosts.astro';
+import CallToAction from '~/components/widgets/CallToAction.astro';
+import { services, projects, values } from '~/data/agg';
+
+const metadata = {
+  title: 'African Geomatics Group | GIS & Geospatial Consulting in Kenya & Africa',
+  ignoreTitleTemplate: true,
+};
+---
+
+<Layout metadata={metadata}>
+  <Hero
+    tagline="Spatial intelligence for public good"
+    actions={[
+      { variant: 'primary', text: 'Explore our services', href: '/services' },
+      { text: 'Schedule consultation', href: '/contact' },
+    ]}
+    image={{
+      src: '~/assets/images/agg/drone-field-day.jpg',
+      alt: 'Survey drone on a school field, with pupils watching the pre-flight checks',
+    }}
+  >
+    <Fragment slot="title">Geospatial Intelligence for <span class="text-[#ffc107]">Africa's Future</span></Fragment>
+    <Fragment slot="subtitle">
+      Geomatics consulting firm delivering high-impact spatial solutions across land management, environmental
+      monitoring, urban planning and climate resilience in Africa.
+    </Fragment>
+  </Hero>
+
+  <Features
+    id="services"
+    tagline="Services"
+    title="From data acquisition to decision-ready insight"
+    subtitle="End-to-end geospatial solutions for governments, utilities, NGOs and development agencies."
+    items={services.map(({ title, summary, icon }) => ({ title, description: summary, icon }))}
+    columns={3}
+    classes={{ container: 'bg-[var(--agg-bg-alt)] rounded-3xl px-4 md:px-8' }}
+  />
+
+  <Content
+    isReversed
+    tagline="About"
+    title="Precision. Insight. Impact."
+    items={[
+      { title: 'Land use & urban planning', icon: 'tabler:building-community' },
+      { title: 'Environmental & climate monitoring', icon: 'tabler:leaf' },
+      { title: 'Agricultural intelligence', icon: 'tabler:plant-2' },
+      { title: 'Infrastructure & disaster management', icon: 'tabler:droplet' },
+      { title: 'Custom web GIS applications', icon: 'tabler:code' },
+    ]}
+    image={{
+      src: '~/assets/images/agg/kiwasco-hotspot.jpg',
+      alt: 'Hotspot analysis map of surveyed and unsurveyed areas in the KIWASCO service area, Kisumu',
+      aspect: '4/3',
+    }}
+    callToAction={{ text: 'More about AGG', href: '/about', variant: 'link' }}
+  >
+    <Fragment slot="content">
+      <p>
+        The African Geomatics Group is a geospatial consulting firm headquartered in Kenya, specialising in advanced
+        spatial analysis, remote sensing and GIS solutions tailored to African development challenges.
+      </p>
+      <p class="mt-4">
+        We bridge current technology with local knowledge to deliver insights people can act on. From land
+        administration to climate resilience, we help organisations make better decisions with spatial data.
+      </p>
+    </Fragment>
+  </Content>
+
+  <Projects
+    id="projects"
+    tagline="Selected projects"
+    title="Work that changes decisions on the ground"
+    items={projects.slice(0, 3).map(({ title, client, summary, image, alt, sector }) => ({
+      title: client,
+      description: `${title}. ${summary}`,
+      image: { src: image, alt },
+      tags: [sector],
+      href: '/projects',
+    }))}
+    callToAction={{ text: 'See all projects', href: '/projects' }}
+  />
+
+  <Features2
+    tagline="Our core values"
+    title="How we work"
+    items={values}
+    columns={3}
+  />
+
+  <BlogLatestPosts
+    id="insights"
+    title="Insights from the field"
+    information="Notes on what is changing in Earth observation, UAV mapping and spatial data infrastructure, written for the people who commission the work."
+  />
+
+  <CallToAction
+    layout="banner"
+    title="Let's work together"
+    subtitle="We partner with governments, NGOs, the private sector and development agencies across Africa."
+    actions={[{ variant: 'primary', text: 'Get in touch', href: '/contact', icon: 'tabler:mail' }]}
+  />
+</Layout>

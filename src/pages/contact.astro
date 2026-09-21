@@ -1,0 +1,42 @@
+---
+import Layout from '~/layouts/PageLayout.astro';
+import HeroText from '~/components/widgets/HeroText.astro';
+import ContactUs from '~/components/widgets/Contact.astro';
+import Features2 from '~/components/widgets/Features2.astro';
+
+const metadata = {
+  title: 'Contact',
+  description: 'Contact the African Geomatics Group in Kisumu and Nairobi, Kenya, by email, phone or the enquiry form.',
+};
+---
+
+<Layout metadata={metadata}>
+  <HeroText
+    tagline="Contact"
+    title="Let's Work Together"
+    subtitle="We partner with governments, NGOs, the private sector and development agencies across Africa."
+  />
+
+  <ContactUs
+    id="form"
+    title="Send us a message"
+    subtitle="Tell us about the area, the question and your timeline."
+    inputs={[
+      { type: 'text', name: 'name', label: 'Your name' },
+      { type: 'email', name: 'email', label: 'Email' },
+      { type: 'text', name: 'organisation', label: 'Organisation' },
+    ]}
+    textarea={{ label: 'Message' }}
+    button="Send message"
+  />
+
+  <Features2
+    title="Get in touch"
+    items={[
+      { title: 'Email', description: 'ouma.otih@gmail.com', icon: 'tabler:mail', href: 'mailto:ouma.otih@gmail.com' },
+      { title: 'Phone', description: '+254 741 305 673', icon: 'tabler:phone', href: 'tel:+254741305673' },
+      { title: 'Location', description: 'Kisumu & Nairobi, Kenya', icon: 'tabler:map-pin' },
+    ]}
+    columns={3}
+  />
+</Layout>

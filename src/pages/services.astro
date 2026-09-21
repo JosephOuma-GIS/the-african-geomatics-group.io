@@ -1,0 +1,83 @@
+---
+import Layout from '~/layouts/PageLayout.astro';
+import HeroText from '~/components/widgets/HeroText.astro';
+import Content from '~/components/widgets/Content.astro';
+import Steps from '~/components/widgets/Steps.astro';
+import CallToAction from '~/components/widgets/CallToAction.astro';
+import { Icon } from 'astro-icon/components';
+import { services } from '~/data/agg';
+
+const metadata = {
+  title: 'Services',
+  description:
+    'Remote sensing, land administration, urban planning, environmental monitoring, custom GIS development and training from the African Geomatics Group.',
+};
+---
+
+<Layout metadata={metadata}>
+  <HeroText
+    tagline="Services"
+    title="Our Services"
+    subtitle="End-to-end geospatial solutions, from data acquisition to decision-ready insights."
+  />
+
+  <section class="mx-auto max-w-6xl px-4 sm:px-6 pb-12 md:pb-20">
+    <div class="grid gap-6 md:grid-cols-2">
+      {
+        services.map(({ id, title, icon, summary, detail }) => (
+          <article
+            id={id}
+            class="scroll-mt-24 rounded-2xl border border-gray-200 dark:border-slate-700 bg-white dark:bg-slate-900 p-6 md:p-8 shadow-sm"
+          >
+            <div class="flex items-center gap-4 mb-4">
+              <span class="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-accent/30 text-primary dark:text-accent">
+                <Icon name={icon} class="h-6 w-6" />
+              </span>
+              <h2 class="text-xl md:text-2xl font-bold font-heading text-heading">{title}</h2>
+            </div>
+            <p class="text-default">{summary}</p>
+            <p class="mt-3 text-muted">{detail}</p>
+          </article>
+        ))
+      }
+    </div>
+  </section>
+
+  <Steps
+    tagline="How an engagement runs"
+    title="Four stages, one accountable team"
+    items={[
+      {
+        title: 'Scoping',
+        description: 'We agree the decision the data must support, the area, the accuracy needed and the budget.',
+        icon: 'tabler:list-search',
+      },
+      {
+        title: 'Acquisition',
+        description: 'Satellite archives, UAV flights, field survey or your existing records, whichever fits the question.',
+        icon: 'tabler:satellite',
+      },
+      {
+        title: 'Analysis & validation',
+        description: 'Processing with documented methods, and an accuracy statement you can show to a regulator or funder.',
+        icon: 'tabler:chart-dots',
+      },
+      {
+        title: 'Delivery & handover',
+        description: 'Maps, web tools and geodatabases, plus the training your staff need to keep them running.',
+        icon: 'tabler:package-export',
+      },
+    ]}
+    image={{
+      src: '~/assets/images/agg/training-sekenani.jpg',
+      alt: 'Participants working at laptops during an AGG ArcGIS training',
+    }}
+  />
+
+  <CallToAction
+    layout="banner"
+    title="Have a spatial question?"
+    subtitle="Tell us the decision you need to make and we will propose the simplest dataset that answers it."
+    actions={[{ variant: 'primary', text: 'Schedule consultation', href: '/contact' }]}
+  />
+</Layout>

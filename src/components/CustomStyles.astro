@@ -1,0 +1,57 @@
+---
+// Font family is provided by Astro's native Fonts API (see `fonts` in
+// astro.config.ts and <Font /> in Layout.astro), exposed as `--font-inter`.
+// To switch typefaces, change the `fonts` entry and repoint `--aw-font-*` below.
+---
+
+<style is:inline>
+  :root {
+    --aw-font-sans: 'Segoe UI', Tahoma, Geneva, Verdana, var(--font-inter);
+    --aw-font-serif: 'Segoe UI', Tahoma, Geneva, Verdana, var(--font-inter);
+    --aw-font-heading: 'Segoe UI', Tahoma, Geneva, Verdana, var(--font-inter);
+
+    /* AGG colour ramp, taken from the live original site (index.html :root) */
+    --aw-color-primary: #0056b3;
+    --aw-color-secondary: #007bff;
+    --aw-color-accent: #17a2b8;
+    --agg-amber: #ffc107;
+    --agg-amber-hover: #ffb300;
+    --agg-dark: #1a1a1a;
+
+    --aw-color-text-heading: #1a1a1a;
+    --aw-color-text-default: #333333;
+    --aw-color-text-muted: #666666;
+    --aw-color-bg-page: #ffffff;
+    --agg-bg-alt: #f8f9fa;
+
+    --aw-color-bg-page-dark: #1a1a1a;
+
+    ::selection {
+      background-color: #ffc107;
+      color: #1a1a1a;
+    }
+  }
+
+  .dark {
+    --aw-font-sans: 'Segoe UI', Tahoma, Geneva, Verdana, var(--font-inter);
+    --aw-font-serif: 'Segoe UI', Tahoma, Geneva, Verdana, var(--font-inter);
+    --aw-font-heading: 'Segoe UI', Tahoma, Geneva, Verdana, var(--font-inter);
+
+    /* Same ramp on the original footer's dark ground */
+    --aw-color-primary: #007bff;
+    --aw-color-secondary: #0056b3;
+    --aw-color-accent: #5cc8d8;
+    --aw-color-link: #66b0ff;
+
+    --aw-color-text-heading: #ffffff;
+    --aw-color-text-default: #e6e9ec;
+    --aw-color-text-muted: rgb(230 233 236 / 66%);
+    --aw-color-bg-page: #1a1a1a;
+    --agg-bg-alt: #232527;
+
+    ::selection {
+      background-color: #0056b3;
+      color: #ffffff;
+    }
+  }
+</style>

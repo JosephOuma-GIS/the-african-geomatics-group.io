@@ -1,0 +1,36 @@
+---
+import Layout from '~/layouts/PageLayout.astro';
+import HeroText from '~/components/widgets/HeroText.astro';
+import Projects from '~/components/widgets/Projects.astro';
+import CallToAction from '~/components/widgets/CallToAction.astro';
+import { projects } from '~/data/agg';
+
+const metadata = {
+  title: 'Projects',
+  description: 'Selected African Geomatics Group projects in water infrastructure, conservation, agriculture, planning and training.',
+};
+---
+
+<Layout metadata={metadata}>
+  <HeroText
+    tagline="Projects"
+    title="Selected Projects & Impact"
+    subtitle="Work for utilities, counties, universities and conservation partners across Kenya and beyond."
+  />
+
+  <Projects
+    columns={3}
+    items={projects.map(({ title, client, summary, image, alt, sector }) => ({
+      title: client,
+      description: `${title}. ${summary}`,
+      image: { src: image, alt },
+      tags: [sector],
+    }))}
+  />
+
+  <CallToAction
+    layout="banner"
+    title="Your project could be next"
+    actions={[{ variant: 'primary', text: 'Start a conversation', href: '/contact' }]}
+  />
+</Layout>

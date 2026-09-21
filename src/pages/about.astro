@@ -1,0 +1,66 @@
+---
+import Layout from '~/layouts/PageLayout.astro';
+import HeroText from '~/components/widgets/HeroText.astro';
+import Content from '~/components/widgets/Content.astro';
+import Features2 from '~/components/widgets/Features2.astro';
+import Team from '~/components/widgets/Team.astro';
+import CallToAction from '~/components/widgets/CallToAction.astro';
+import { values } from '~/data/agg';
+
+const metadata = {
+  title: 'About',
+  description: 'The African Geomatics Group: a geospatial consulting firm headquartered in Kenya. Who we are, what we value and who leads the work.',
+};
+---
+
+<Layout metadata={metadata}>
+  <HeroText tagline="About" title="About The African Geomatics Group" subtitle="Precision. Insight. Impact." />
+
+  <Content
+    image={{
+      src: '~/assets/images/agg/presentation.jpg',
+      alt: 'Presentation on remote sensing and deep learning methods in digital soil mapping',
+      aspect: '3/4',
+    }}
+  >
+    <Fragment slot="content">
+      <p>
+        The African Geomatics Group is a geospatial consulting firm headquartered in Kenya, with a base in Kisumu and
+        Nairobi. We specialise in advanced spatial analysis, remote sensing and GIS solutions tailored to African
+        development challenges.
+      </p>
+      <p class="mt-4">
+        We bridge current technology with local knowledge to deliver insights people can act on. From land
+        administration to climate resilience, we help organisations make better decisions through geospatial
+        intelligence.
+      </p>
+    </Fragment>
+  </Content>
+
+  <Features2 tagline="Our core values" title="What we hold ourselves to" items={values} columns={3} />
+
+  <Team
+    tagline="Leadership"
+    title="Meet our leader"
+    columns={1}
+    members={[
+      {
+        name: 'Joseph Otieno Ouma',
+        role: 'Director & Lead Consultant',
+        bio: 'GIS solution developer with 7+ years in geospatial intelligence across Africa and Asia.',
+        image: { src: '~/assets/images/agg/joseph-ouma.jpg', alt: 'Joseph Otieno Ouma' },
+        socials: [
+          { icon: 'tabler:mail', href: 'mailto:ouma.otih@gmail.com', ariaLabel: 'Email Joseph' },
+          { icon: 'tabler:brand-github', href: 'https://github.com/JosephOuma-GIS', ariaLabel: 'GitHub' },
+        ],
+      },
+    ]}
+  />
+
+  <CallToAction
+    layout="banner"
+    title="Our team is growing"
+    subtitle="We are recruiting a remote sensing specialist and a web GIS developer."
+    actions={[{ variant: 'primary', text: 'See open roles', href: '/careers' }]}
+  />
+</Layout>

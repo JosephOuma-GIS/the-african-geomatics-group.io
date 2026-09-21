@@ -1,0 +1,52 @@
+---
+import Layout from '~/layouts/PageLayout.astro';
+import HeroText from '~/components/widgets/HeroText.astro';
+import Button from '~/components/ui/Button.astro';
+
+const metadata = {
+  title: 'Careers',
+  description: 'Open roles at the African Geomatics Group: remote sensing specialist and web GIS developer.',
+};
+
+const roles = [
+  {
+    title: 'Research Assistant (Remote Sensing Specialist)',
+    meta: 'Full-time · Nairobi or remote',
+    text: 'Lead advanced remote sensing projects using Google Earth Engine, machine learning classification and multi-sensor data fusion. Work on real conservation and development projects across East Africa.',
+    subject: 'Application: Remote Sensing Specialist',
+  },
+  {
+    title: 'Web GIS Developer',
+    meta: 'Full-time · Flexible location',
+    text: 'Develop interactive mapping platforms using Leaflet, Mapbox, GeoServer and modern JavaScript frameworks. Build custom geospatial applications that deliver insights to governments, NGOs and private sector partners.',
+    subject: 'Application: Web GIS Developer',
+  },
+];
+---
+
+<Layout metadata={metadata}>
+  <HeroText
+    tagline="Careers"
+    title="Join Our Team"
+    subtitle="We are expanding our expert team across Africa. Be part of shaping the future of geospatial intelligence on the continent."
+  />
+
+  <section class="mx-auto max-w-4xl px-4 sm:px-6 pb-16 md:pb-24 grid gap-6">
+    {
+      roles.map(({ title, meta, text, subject }) => (
+        <article class="rounded-2xl border border-gray-200 dark:border-slate-700 bg-white dark:bg-slate-900 p-6 md:p-8 shadow-sm">
+          <h2 class="text-xl md:text-2xl font-bold font-heading text-heading">{title}</h2>
+          <p class="mt-1 text-sm font-medium text-secondary dark:text-accent">{meta}</p>
+          <p class="mt-4 text-default">{text}</p>
+          <div class="mt-6">
+            <Button variant="primary" text="Apply now" href={`mailto:ouma.otih@gmail.com?subject=${encodeURIComponent(subject)}`} />
+          </div>
+        </article>
+      ))
+    }
+    <p class="text-center text-muted">
+      Don't see your ideal role? We are always looking for passionate geospatial professionals. Send your resume and
+      cover letter to <a class="text-primary dark:text-accent underline" href="mailto:ouma.otih@gmail.com?subject=Career%20Inquiry">ouma.otih@gmail.com</a>.
+    </p>
+  </section>
+</Layout>
